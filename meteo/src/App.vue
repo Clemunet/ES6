@@ -1,20 +1,13 @@
-<script>
-import CitiesList from './views/CitiesList.vue'
-
-export default {
-  components: { CitiesList },
-  methods: {
-    onListClick() {
-      alert('Vous avez demandé la liste des villes.')
-    },
-  },
-}
-</script>
-
 <template>
-  <h1>Bienvenue sur Météo des villes</h1>
-  <a href="#villes" @click.prevent="onListClick">Voir la météo des villes</a>
-  <CitiesList />
+  <header>
+    <nav aria-label="Navigation principale">
+      <RouterLink to="/">Accueil</RouterLink>
+      <RouterLink to="/villes">Voir la météo des villes</RouterLink>
+    </nav>
+  </header>
+  <main>
+    <RouterView />
+  </main>
 </template>
 
 <style scoped></style>
