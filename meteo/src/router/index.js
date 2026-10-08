@@ -8,7 +8,17 @@ const router = createRouter({
   routes: [
     { path: '/', component: HomeView },
     { path: '/villes', component: CitiesList },
-    { path: '/ville', component: City },
+    {
+      path: '/ville',
+      component: City,
+      // Cette route reste une démonstration avec des données de test.
+      props: () => ({
+        name: 'Ma ville',
+        weather: 'Peu nuageux',
+        temperature: 20.55,
+        updatedAt: new Date(),
+      }),
+    },
   ],
 })
 

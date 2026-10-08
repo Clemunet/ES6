@@ -1,12 +1,10 @@
 <script>
 export default {
-  data() {
-    return {
-      name: 'Ma ville',
-      weather: 'Peu nuageux',
-      temperature: 20.55,
-      updatedAt: new Date(),
-    }
+  props: {
+    name: { type: String, required: true },
+    weather: { type: String, required: true },
+    temperature: { type: Number, required: true },
+    updatedAt: { type: Date, required: true },
   },
 }
 </script>
