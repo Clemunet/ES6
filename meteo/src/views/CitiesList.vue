@@ -23,11 +23,19 @@ export default {
       ],
     }
   },
+  computed: {
+    displayedCities() {
+      const [firstCity, secondCity] = this.cities
+
+      return `${firstCity.name} et ${secondCity.name}`
+    },
+  },
 }
 </script>
 
 <template>
   <h1>Météo - Liste des villes</h1>
+  <p>Villes affichées : {{ displayedCities }}</p>
   <div class="cities-list">
     <City
       v-for="city in cities"
