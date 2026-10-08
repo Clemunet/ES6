@@ -1,6 +1,7 @@
 <script>
 import { format, register } from 'timeago.js'
 import fr from 'timeago.js/lib/lang/fr'
+import { formatTemperature } from '../utils/formatTemperature.js'
 
 register('fr', fr)
 
@@ -15,6 +16,7 @@ export default {
     formatDate(date) {
       return format(date, 'fr')
     },
+    formatTemperature,
   },
 }
 </script>
@@ -23,7 +25,7 @@ export default {
   <article class="city-card">
     <h2>{{ name }}</h2>
     <p>{{ weather }}</p>
-    <p class="temperature">{{ temperature }} °C</p>
+    <p class="temperature">{{ formatTemperature(temperature) }}</p>
     <p>
       Mis à jour
       <time :datetime="updatedAt.toISOString()" :title="updatedAt.toLocaleString('fr-FR')">
