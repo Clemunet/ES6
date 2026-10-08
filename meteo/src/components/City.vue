@@ -3,7 +3,7 @@ import { format, register } from 'timeago.js'
 import fr from 'timeago.js/lib/lang/fr'
 import { formatTemperature } from '../utils/formatTemperature.js'
 
-register('fr', fr)
+register('fr', fr.default)
 
 export default {
   props: {
