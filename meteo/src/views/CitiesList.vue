@@ -30,12 +30,12 @@ export default {
   <h1>Météo - Liste des villes</h1>
   <div class="cities-list">
     <City
-    v-for="city in cities"
-    :key="city.id"
-    :name="city.name"
-    :weather="city.weather"
-    :temperature="city.temperature"
-    :updated-at="city.updatedAt"
-  />
+      v-for="city in cities"
+      :key="city.id"
+      :name="city.name"
+      :weather="city.weather"
+      :temperature="city.temperature"
+      :updated-at="city.updatedAt"
+    />
   </div>
 </template>
