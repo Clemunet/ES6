@@ -1,11 +1,16 @@
-<script setup></script>
+<script>
+export default {
+  methods: {
+    onListClick() {
+      alert('Vous avez demandé la liste des villes.')
+    },
+  },
+}
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <h1>Bienvenue sur Météo des villes</h1>
+  <a href="#villes" @click.prevent="onListClick">Voir la météo des villes</a>
 </template>
 
 <style scoped></style>
